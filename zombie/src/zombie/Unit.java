@@ -11,6 +11,9 @@ public abstract class Unit {
 	private int def;
 	private int pos;
 	
+	interface Attack{
+		public void attack(Unit target);
+	}
 	public String getName() {
 		return this.name;
 	}
@@ -54,7 +57,9 @@ public abstract class Unit {
 		System.out.println(dam+"의 출혈");
 		target.setHp(target.getHp()-dam);
 		System.out.println(target.name+"의 남은 체력 : "+target.hp);
+
 	}
+	
 	
 	public void print() {
 		System.out.printf("[이름] : %s \t [체력] : %d\n",name,hp);

@@ -1,6 +1,8 @@
 package zombie;
 
-public class ZombieKing extends Unit {
+import zombie.Unit.Attack;
+
+public class ZombieKing extends Unit implements Attack {
 	
 	private int shield;
 	public ZombieKing(String name, int hp, int att, int def, int pos,int shield) {

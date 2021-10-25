@@ -1,6 +1,8 @@
 package zombie;
 
-public class Hero extends Unit  {
+import zombie.Unit.Attack;
+
+public class Hero extends Unit implements Attack  {
 	
 	private int cnt = 3; // ¹°¾à
 	
