@@ -1,8 +1,9 @@
 package zombie;
 
-public class Hero extends Unit {
+public class Hero extends Unit  {
 	
 	private int cnt = 3; // ¹°¾à
+	
 	public Hero(String name, int hp, int att, int def, int pos) {
 		super(name, hp, att, def, pos);
 		

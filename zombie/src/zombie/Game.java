@@ -15,6 +15,8 @@ public class Game {
 	
 	private void init() {
 		h = new Hero("용사", 100 , 5, 1, 1);
+		enemy.add(new Zombie("좀비왕",45,10,2,6));
+		
 	}
 	
 	
@@ -123,6 +125,7 @@ public class Game {
 					h.setDef(h.getDef()+rnum);
 					System.out.printf("방어력이 %d만큼 증가했다!",rnum);
 				}
+				act=2;
 			}
 		}
 	}
