@@ -2,7 +2,7 @@ package game;
 
 public class Player extends Unit {
 	
-	public Player(String name, int max, int power) {
-		super(name, max, power);
+	public Player(String na, int max, int power) {
+		super(na, max, power);
 	}
 }
