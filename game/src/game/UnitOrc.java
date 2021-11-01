@@ -1,7 +1,7 @@
 package game;
 
 public class UnitOrc extends Unit{
-	public UnitOrc() {
+	UnitOrc() {
 		name = "ø¿≈©";
 	}
 	public void skill() {

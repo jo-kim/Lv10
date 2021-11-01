@@ -1,7 +1,7 @@
 package game;
 
 public class UnitWolf extends Unit {
-	public UnitWolf() {
+	 UnitWolf() {
 		name = "´Á´ë";
 	}
 	public void skill() {

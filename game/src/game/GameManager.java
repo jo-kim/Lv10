@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class GameManager {
 	public static Scanner sc = new Scanner(System.in);
-	public static Random rn = new Random();
+    Random rn = new Random();
 	public static String nextStage = "";
 	String curStage = "";
 	Map<String , Stage> stageList = new HashMap<String,Stage>();
