@@ -166,7 +166,7 @@ public class DrawingBoard extends MyUtil{
 			xx[2] = t.getX() + t.getW()/2;
 			yy[2] = t.getY() + t.getH();
 			
-			g.drawPolygon(xx, yy, 3);
+			g.drawPolygon(xx, yy, 3); 
 		}
 		requestFocusInWindow(); // keylistener시 필요 포커스 다시하게끔
 		repaint();
