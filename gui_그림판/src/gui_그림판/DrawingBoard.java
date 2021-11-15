@@ -114,6 +114,7 @@ public class DrawingBoard extends MyUtil{
 						this.rect.getH());
 			}
 			else if(this.type == this.TRI) {
+				// this.rect 기준으로 - > 삼각형을 그릴 좌표배열 만들기
 				int[]xx = new int[3];
 				int[]yy = new int[3];
 				/*
@@ -151,6 +152,11 @@ public class DrawingBoard extends MyUtil{
 		}
 		
 		// tri
+		// 뒤집어서 그리기    
+		/*
+		 *    11       22
+		 *        00
+		 */
 		for(int i=0; i<this.tri.size(); i++) {
 			GrimRect t = this.tri.get(i);
 			int[]xx = new int[3];
@@ -166,6 +172,7 @@ public class DrawingBoard extends MyUtil{
 			xx[2] = t.getX() + t.getW()/2;
 			yy[2] = t.getY() + t.getH();
 			
+			g.setColor(t.getC());
 			g.drawPolygon(xx, yy, 3); 
 		}
 		requestFocusInWindow(); // keylistener시 필요 포커스 다시하게끔
@@ -203,18 +210,23 @@ public class DrawingBoard extends MyUtil{
 		int x = e.getX(); // 드래그 당한 좌표
 		int y = e.getY();
 		
-		int w = Math.abs(x-startX);  // 절대값
-		int h = Math.abs(y-startY);
+		int w = this.type == TRI ? x - startX : Math.abs(x-startX);  // 절대값
+		int h = this.type == TRI ? y - startY :Math.abs(y-startY);
+		
+		// 삼각형
+		// xx[1] xx[2] 
 		
 		if(shift)
 			w = h; // 둘중 아무나가 기준점이됨
 		
 		int rX = startX;
 		int rY = startY;
-		if(x < startX)
+		if(this.type != TRI) { // 삼각형일때는 시작점 고정 아닐때는 반전
+		if(x < startX )
 			rX = startX - w;
 		if(y < startY)
 			rY = startY - h;
+		}
 		this.rect = new GrimRect(rX,rY,w,h,Color.red); // 시작좌표를 기준으로 그림 그리기 
 		
 		// -- 일때는 startX 와 startY를 바꿔줘야함 startX - w/ startY - h로
