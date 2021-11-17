@@ -149,6 +149,7 @@ public class DrawingBoard extends MyUtil{
 			GrimRect o = this.circles.get(i);
 			g.setColor(o.getC());
 			g.drawRoundRect(o.getX(), o.getY(), o.getW(), o.getH(), o.getW(), o.getH());
+		
 		}
 		
 		// tri

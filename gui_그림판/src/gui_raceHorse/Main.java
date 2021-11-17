@@ -3,7 +3,8 @@ package gui_raceHorse;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		HorseFrame game = new HorseFrame();
 
 	}
 
