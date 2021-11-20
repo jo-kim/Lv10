@@ -24,7 +24,7 @@ public class JoinPanel extends Util{
 	JoinFrame joinframe = null;
 	public JoinPanel() {
 		setLayout(null);
-		setBounds(0,0,600,600);
+		setBounds(0,0,500,500);
 		addRegister();
 		addTextField();
 		addLabel();
@@ -57,7 +57,7 @@ public class JoinPanel extends Util{
 	}
 	private void addRegister() {
 		this.register = new JButton();
-		this.register.setBounds(240,350,100,30);
+		this.register.setBounds(200,350,100,30);
 		this.register.setText("Register");
 		this.register.setBackground(new Color(148,218,255));
 		this.register.addActionListener(this);
@@ -78,14 +78,14 @@ public class JoinPanel extends Util{
 				String name = inputName.getText();
 				if(!id.equals("") && !pw.equals("")) { // ºóÄ­ ¾Æ´Ò¶§
 					addUser(id,pw,name);
-					System.out.println(Panel.users.size());
-					
+//					System.out.println(Panel.users.size());
+					joinframe.dispose();
 				}
 				else {
 					JOptionPane.showMessageDialog(null, "Check your Information");
 					
 				}
-				joinframe.dispose();
+				
 			}
 		}
 		
