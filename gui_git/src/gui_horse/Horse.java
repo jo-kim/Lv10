@@ -6,9 +6,9 @@ import javax.swing.ImageIcon;
 
 public class Horse {
 	// 
-	public final int READY  = 0;
-	public final int RUN = 1;
-	public final int GOAL = 2;
+
+	public final int RUN = 0;
+	public final int GOAL = 1;
 	
 	private int num; 
 	private int x,y,w,h;
