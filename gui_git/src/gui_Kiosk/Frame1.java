@@ -27,7 +27,7 @@ public class Frame1 extends JFrame implements ActionListener{
 	private JButton here;
 	private Image hereImg = new ImageIcon("image/here.png").getImage().getScaledInstance(500, 300, Image.SCALE_SMOOTH);
 	
-	public Panel1 menu = new Panel1();
+	public Panel1 firstMenu = new Panel1();
 	
 	public Frame1() {
 		super("Main");
@@ -62,9 +62,9 @@ public class Frame1 extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == this.toGo || e.getSource() == this.here) {
-		
-			this.setContentPane(menu);
+			this.setContentPane(firstMenu);
 	}
+		
 
 	
 	}
